@@ -1,0 +1,21 @@
+flowchart TD
+    subgraph Frontend
+      FE[React Microfrontends]
+    end
+
+    subgraph BFF
+      ORCH[api-battle-orchestrator]
+    end
+
+    subgraph Microservices
+      U[api-battle-users]
+      C[api-battle-characters]
+      B[api-battle-battles]
+      T[api-battle-tournaments]
+    end
+
+    FE --> ORCH
+    ORCH --> U
+    ORCH --> C
+    ORCH --> B
+    ORCH --> T
